@@ -1,19 +1,5 @@
 const Provider = require("../models/provider");
-const { isValidObjectId } = require("mongoose");
-
-const validateId = async (req) => {
-  const { id } = req.params;
-
-  if (!id) {
-    throw new Error("Invalid Id");
-  }
-  if (!isValidObjectId(id)) {
-    throw new Error("Invalid Id");
-  }
-  if (!(await Provider.findById(id))) {
-    throw new Error("Invalid Id");
-  }
-};
+const { validateId } = require("../utils/validator");
 
 exports.getProvider = async (req, res, next) => {
   try {
@@ -43,7 +29,7 @@ exports.createProvider = async (req, res, next) => {
 
 exports.updateProvider = async (req, res, next) => {
   try {
-    await validateId(req);
+    await validateId(req, Provider);
     const data = await Provider.updateOne({ _id: req.params.id }, req.body);
     return res.send({ message: "Success", error: null, data });
   } catch (e) {
@@ -55,7 +41,7 @@ exports.updateProvider = async (req, res, next) => {
 
 exports.deleteProvider = async (req, res, next) => {
   try {
-    await validateId(req);
+    await validateId(req, Provider);
     const data = await Provider.updateOne(
       { _id: req.params.id },
       { deleted: true }
