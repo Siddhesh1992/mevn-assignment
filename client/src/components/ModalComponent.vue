@@ -25,26 +25,26 @@
 
                         <label for="name"
                             class="  text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap text-end">Name</label>
-                        <input type="text" id="name" :value="name" @input="handleInput"
+                        <input type="text" id="name" :value="name" @input="handleInput" placeholder="Any Name"
                             class="col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required>
 
 
                         <label for="email"
                             class="  text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap text-end">Email</label>
-                        <input type="text" id="email" :value="email" @input="handleInput"
+                        <input type="text" id="email" :value="email" @input="handleInput" placeholder="test@gmail.com"
                             class="col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required>
 
                         <label for="phone"
                             class=" text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap text-end">Phone</label>
-                        <input type="text" id="phone" :value="phone" @input="handleInput"
+                        <input type="text" id="phone" :value="phone" @input="handleInput" placeholder="999-999-9999"
                             class="col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required>
 
                         <label for="provider"
                             class=" text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap text-end">Provider</label>
-                        <input type="text" id="provider" :value="provider" @input="handleInput"
+                        <input type="text" id="provider" :value="provider" @input="handleInput" placeholder="Provider 1"
                             class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <button
                             class="bg-slate-300 text-slate-500 active:bg-slate-200 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
