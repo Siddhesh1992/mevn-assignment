@@ -35,10 +35,17 @@
 
 ```bash
 npm run dev
+http://localhost:8000/
 ```
 
 - TO Run Server
 
 ```bash
 npm start
+```
+
+- For Swagger documentation
+
+```bash
+http://localhost:3000/api-docs
 ```
