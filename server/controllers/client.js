@@ -19,7 +19,7 @@ exports.getClient = async (req, res, next) => {
 
 exports.createClient = async (req, res, next) => {
   try {
-    const providerSanitized = await validateProvider(req, Client);
+    const providerSanitized = await validateProvider(req, Provider);
 
     const data = await Client.create({
       ...req.body,
@@ -36,10 +36,11 @@ exports.createClient = async (req, res, next) => {
 exports.updateClient = async (req, res, next) => {
   try {
     await validateId(req, Client);
-    const providerSanitized = await validateProvider(req, Client);
+    const providerSanitized = await validateProvider(req, Provider);
     const data = await Client.updateOne(
       { _id: req.params.id },
-      { ...req.body, provider: providerSanitized }
+      { ...req.body, provider: providerSanitized },
+      { runValidators: true }
     );
     return res.send({ message: "Success", error: null, data });
   } catch (e) {

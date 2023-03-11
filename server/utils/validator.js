@@ -13,7 +13,7 @@ const validateProvider = async (req, db) => {
 
   const providerSanitized = [...new Set(provider)];
 
-  for (const provid of [providerSanitized]) {
+  for (const provid of providerSanitized) {
     await validateId({ params: { id: provid } }, Provider);
   }
 
